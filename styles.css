@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Применяем шрифт Poppins ко всему сайту */
+    font-weight: 400;  /* Толщина шрифта */
+    font-size: 10px;  /* Размер шрифта по умолчанию */
+    line-height: 14px; /* Высота строки */
+    letter-spacing: 0.4px; /* Межбуквенный интервал */
+    margin: 0;
+    background-color: #111;
+    color: #fff;
+    padding-bottom: 60px;
+}
+/* Header */
+.app-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.app-container {
+    display: flex;
+    justify-content: flex-start; /* Элементы выравниваются по левому краю */
+    align-items: center; /* Центровка по вертикали */
+    background-color: #1a1a1a; /* Темный фон */
+    margin-top: 30px;
+    font-size: 18px; /* Размер шрифта */
+    font-weight: 600; /* Жирный шрифт */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Убедимся, что шапка не перекрывает другие элементы */
+}
+
+/* Иконка меню */
+.menu-icon {
+    font-size: 24px; /* Размер иконки */
+    margin-right: 10px; /* Отступ от текста */
+    cursor: pointer; /* Курсор для интерактивности */
+}
+
+/* Название приложения */
+.app-title {
+    font-size: 32px; /* Размер текста */
+    font-weight: 800; /* Жирность текста */
+    color: #ffcc00; /* Белый цвет текста */
+}
+
+.welcome-banner {
+    position: relative; /* Для контейнера, чтобы потом позиционировать картинку внутри */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden; /* Прячем все, что выходит за границы контейнера */
+}
+
+.banner-img-wrapper {
+    position: absolute; /* Картинка на заднем плане */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Помещаем картинку за контент */
+}
+
+.banner-img {
+    width: 250px; /* Растягиваем на всю ширину контейнера */
+    height: 200px; /* Растягиваем на всю высоту контейнера */
+    object-fit: cover; /* Картинка масштабируется с сохранением пропорций */
+}
+
+.banner-text h1 {
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+.banner-text p {
+    font-size: 14px;
+}
+
+.read-more {
+    background-color: white;
+    color: #111;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.read-more:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Контейнер для баланса */
+.balance-container {
+    margin-top: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between; /* Элементы распределяются по краям */
+    align-items: center; /* Центровка по вертикали */
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    height: 40px; /* Высота контейнера */
+    border-radius: 10px; /* Скругление углов */
+    margin-bottom: 2px; /* Отступ снизу */
+    overflow: hidden; /* Избегаем выхода элементов за границы */
+    position: relative; /* Для абсолютного позиционирования дочерних элементов */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Текст баланса */
+.balance {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 600; /* Жирный текст */
+    margin-right: 10px; /* Отступ от кнопки */
+    margin-left: 10px;
+    white-space: nowrap; /* Текст в одну строку, без переноса */
+    overflow: hidden; /* Скрытие лишнего текста */
+    text-overflow: ellipsis; /* Троеточие для длинного текста */
+}
+
+/* Кнопка пополнения */
+.recharge-btn {
+    background-color: #ffcc00;
+    color: #111;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    height: 100%; /* Занимает всю высоту контейнера */
+    padding: 0 20px; /* Горизонтальные отступы текста */
+    border-radius: 10px; /* Скругление углов кнопки */
+    display: flex;
+    align-items: center; /* Центровка текста по вертикали */
+    justify-content: center; /* Центровка текста по горизонтали */
+    white-space: nowrap; /* Текст в одну строку */
+}
+
+/* Ховер-эффект для кнопки */
+.recharge-btn:hover {
+    background-color: #f2b200;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+}
+
+.add-icon{
+    width: 20px;
+    height: 20px;
+}
+
+/* Category tabs */
+.category-tabs {
+    display: flex;
+    overflow-x: auto; /* Позволяет горизонтальную прокрутку */
+    white-space: nowrap; /* Все кнопки в одну строку */
+    margin: 10px 0;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px; /* Расстояние между кнопками */
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка для мобильных устройств */
+    scrollbar-width: none; /* Скрыть стандартный скроллбар (для Firefox) */
+}
+
+.category-tabs::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар для Webkit-браузеров */
+}
+
+.category-tabs button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
+    display: inline-flex; /* Горизонтальное расположение кнопок */
+    align-items: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    transition: color 0.3s ease-in-out;
+    flex-shrink: 0; /* Кнопки не сжимаются */
+}
+
+
+.category-tabs button img {
+    max-width: 20px;
+    height: auto;
+}
+
+.category-tabs button.active {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+.category-tabs button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background-color: #ffcc00;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.category-tabs button.active::after {
+    width: 100%;
+}
+
+.category-tabs button:hover {
+    color: #ffcc00;
+}
+
+/* Section content */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header .view-all {
+    color: white;
+    font-weight: 600;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+
+
+.section-header .section-icon {
+    width: 40px;
+    height: auto;
+}
+
+/* Game section */
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+
+
+.game-card {
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+
+/* Навигационный бар */
+.category-tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Стили для кнопки поиска */
+.search-btn {
+    background-color: #333;
+    color: #111;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px 10px; /* Обычные прямоугольные кнопки с отступами */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+    font-size: 16px; /* Размер шрифта */
+    margin-right: 10px; /* Отступ от навигации */
+    transition: all 0.3s ease;
+    display: flex; /* Используем flex, чтобы иконка и текст располагались рядом */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    height: 55px; /* Высота кнопки */
+    width: 55px;
+}
+
+/* Стили для иконки внутри кнопки */
+.search-btn .search-icon {
+    width: 34px; /* Ширина иконки */
+    height: 34px; /* Высота иконки */
+    margin-right: 10px; /* Отступ между иконкой и текстом (если нужно) */
+}
+
+/* Стили для кнопки поиска при наведении */
+.search-btn:hover {
+    background-color: #444; /* Сделаем цвет кнопки немного светлее */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Тень при наведении */
+}
+
+
+
+.game-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card img:hover {
+    transform: scale(1.1);
+
+}
+
+.game-card img:active {
+    transform: scale(1.05);
+
+}
+
+
+/* Footer navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #111;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+/* Global styles */
+
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom-nav .nav-item {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease-in-out;
+}
+
+.bottom-nav .nav-item img {
+    max-width: 30px;
+    height: auto;
+}
+
+.bottom-nav .nav-item.active {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+/* Основной футер */
+.footer {
+    display: flex;
+    flex-direction: column;  /* Вертикальное расположение блоков */
+    justify-content: flex-start;  /* Элементы расположены сверху */
+    align-items: center;  /* Выравнивание по горизонтали */
+    background-color: #111;  /* Темный фон */
+    padding: 20px;
+}
+
+/* Стиль для блоков в футере */
+.footer-block {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Блок с ссылками (первый блок) */
+.footer-links {
+    display: flex;
+    justify-content: space-between; /* Распределяет два столбца */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.footer-column {
+    width: 48%; /* Каждый столбец занимает 48% ширины */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin: 8px 0;
+}
+
+.footer-column a {
+    font-family: 'Poppins', sans-serif; /* Шрифт Poppins */
+    font-weight: 400;  /* Толщина 400 */
+    font-size: 10px;  /* Размер шрифта */
+    line-height: 14px; /* Высота строки */
+    letter-spacing: 0.4px; /* Межбуквенный интервал */
+    color: #E1E1E1;  /* Цвет шрифта */
+    text-decoration: none;  /* Убираем подчеркивание */
+    transition: color 0.3s ease;  /* Плавное изменение цвета при наведении */
+}
+
+.footer-column a:hover {
+    color: #ffcc00;  /* Цвет при наведении */
+}
+
+/* Блок с цитатой и картинкой (второй блок) */
+.footer-quote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.quote-column {
+    width: 48%;
+}
+
+.quote-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #f2f2f2;
+}
+
+.image-column {
+    width: 48%;
+}
+
+.footer-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Блок с копирайтом (третий блок) */
+.footer-copyright {
+    background-color: #000;  /* Черный фон */
+    color: white;  /* Белый текст */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: auto;  /* Это гарантирует, что последний блок будет расположен внизу */
+}
+
+/* Нижний навбар */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Элементы навбара */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+
+.nav-item img {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Подсветка текста активной кнопки */
+.nav-item.active span {
+    color: #ffcc00;
+}
+
+/* Добавление палочки с анимацией */
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    top: -5px; /* Расположено над кнопкой */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; /* Начальная ширина */
+    height: 4px;
+    background-color: #ffcc00; /* Цвет палочки */
+    border-radius: 2px;
+    animation: slide-in 0.3s ease forwards; /* Анимация появления */
+}
+
+/* Анимация для палочки */
+@keyframes slide-in {
+    from {
+        width: 0; /* Начинаем с нулевой ширины */
+    }
+    to {
+        width: 100%; /* Конечная ширина палочки */
+    }
+}
+
+
