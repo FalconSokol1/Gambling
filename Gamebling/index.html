@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+    <div class="app-container">
+        <span class="menu-icon">☰</span>
+        <span class="app-title">TEST</span>
+    </div>
+    <div class="balance-container">
+        <span class="balance">10,303.56 ₽</span>
+        <button class="recharge-btn"> <img src="assets/add.png" alt="Пополнение" class="add-icon">
+        </button>
+    </div>
+</header>
+
+<section class="welcome-banner">
+    <div class="banner-text">
+        <h1>Welcome Bonus</h1>
+        <p>100% up to 2 500 ₽ + 100 Free Spins</p>
+        <button class="read-more">Read More</button>
+    </div>
+    <img class="banner-img" src="assets/banner.png" alt="Welcome Bonus Image">
+</section>
+
+
+<div class="navbar-wrapper">
+    <button class="search-btn">
+        <img src="assets/search.png" alt="Поиск" class="search-icon">
+    </button>
+    <nav class="category-tabs">
+        <button onclick="scrollToSection('all-games')">All Games</button>
+        <button onclick="scrollToSection('new-games')">New Games</button>
+        <button onclick="scrollToSection('casino-games')">Casino Games</button>
+        <button onclick="scrollToSection('sports-games')">Sports Games</button>
+    </nav>
+</div>
+
+<!-- Секция Popular Games -->
+<section class="game-section" id="all-games">
+    <div class="section-header">
+        <div class="header-left">
+            <img src="assets/icoSection.png" alt="Popular Icon" class="section-icon">
+            <h2>Popular Games</h2>
+        </div>
+        <a href="#" class="view-all">View All</a>
+    </div>
+    <div class="games-list">
+        <div class="game-card">
+            <img src="assets/game10.png" alt="Pot of Fortune">
+        </div>
+        <div class="game-card">
+            <img src="assets/game2.png" alt="Olympus Dice">
+        </div>
+        <div class="game-card">
+            <img src="assets/game3.png" alt="Beast Deep">
+        </div>
+        <div class="game-card">
+            <img src="assets/game10.png" alt="Pot of Fortune">
+        </div>
+        <div class="game-card">
+            <img src="assets/game2.png" alt="Olympus Dice">
+        </div>
+        <div class="game-card">
+            <img src="assets/game3.png" alt="Beast Deep">
+        </div>
+    </div>
+</section>
+
+<!-- Секция New Games -->
+<section class="game-section" id="new-games">
+    <div class="section-header">
+        <div class="header-left">
+            <img src="assets/icoSection.png" alt="New Icon" class="section-icon">
+            <h2>New Games</h2>
+        </div>
+        <a href="#" class="view-all">View All</a>
+    </div>
+    <div class="games-list">
+        <div class="game-card">
+            <img src="assets/game4.png" alt="Treasure Quest">
+        </div>
+        <div class="game-card">
+            <img src="assets/game5.png" alt="Golden Pharaoh">
+        </div>
+        <div class="game-card">
+            <img src="assets/game6.png" alt="Jungle Jackpot">
+        </div>
+    </div>
+</section>
+
+<!-- Секция Casino Games -->
+<section class="game-section" id="casino-games">
+    <div class="section-header">
+        <div class="header-left">
+            <img src="assets/icoSection.png" alt="Casino Icon" class="section-icon">
+            <h2>Casino Games</h2>
+        </div>
+        <a href="#" class="view-all">View All</a>
+    </div>
+    <div class="games-list">
+        <div class="game-card">
+            <img src="assets/game6.png" alt="Blackjack">
+        </div>
+        <div class="game-card">
+            <img src="assets/game8.png" alt="Roulette">
+        </div>
+        <div class="game-card">
+            <img src="assets/game9.png" alt="Poker">
+        </div>
+    </div>
+</section>
+
+<!-- Секция Sports Games -->
+<section class="game-section" id="sports-games">
+    <div class="section-header">
+        <div class="header-left">
+            <img src="assets/icoSection.png" alt="Sports Icon" class="section-icon">
+            <h2>Sports Games</h2>
+        </div>
+        <a href="#" class="view-all">View All</a>
+    </div>
+    <div class="games-list">
+        <div class="game-card">
+            <img src="assets/game10.png" alt="Football Fever">
+        </div>
+        <div class="game-card">
+            <img src="assets/game11.png" alt="Cricket Star">
+        </div>
+        <div class="game-card">
+            <img src="assets/game12.png" alt="Tennis Ace">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <!-- Блок с ссылками -->
+    <div class="footer-block footer-links">
+        <div class="footer-column">
+            <ul>
+                <li><a href="#">Casino Bonus Terms</a></li>
+                <li><a href="#">Game Explanations</a></li>
+                <li><a href="#">Sportsbook Bonus Terms</a></li>
+                <li><a href="#">Responsible Gaming</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Condor-Affiliates</a></li>
+                <li><a href="#">Security & Privacy</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Auction Terms</a></li>
+                <li><a href="#">Certificates</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Блок с цитатой и картинкой -->
+    <div class="footer-block footer-quote">
+        <div class="quote-column">
+            <p class="quote-text">"GAMBLING CAN BE ADDICTIVE, PLEASE PLAY RESPONSIBLY."</p>
+        </div>
+        <div class="image-column">
+            <img src="assets/icon1.png" alt="Image" class="footer-image">
+        </div>
+    </div>
+
+    <!-- Блок копирайта -->
+    <div class="footer-block footer-copyright">
+        <p>Copyright © 2024</p>
+    </div>
+</footer>
+
+<footer class="bottom-nav">
+    <button class="nav-item active"><img src="assets/slots.png" alt="Slots"> Slots</button>
+    <button class="nav-item"><img class="nav-img" src="assets/icoSection.png" alt="Casino"> Casino</button>
+    <button class="nav-item"><img src="assets/promo.png" alt="Promo"> Promo</button>
+    <button class="nav-item"><img src="assets/sports.png" alt="Sport"> Sport</button>
+    <button class="nav-item"><img src="assets/Profile.png" alt="Profile"> Profile</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
